@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hosam | AI Engineer</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Segoe UI', sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#050816;
+color:white;
+overflow-x:hidden;
+}
+
+/* CANVAS BACKGROUND */
+canvas{
+position:fixed;
+top:0;
+left:0;
+z-index:-1;
+}
+
+/* NAV */
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 60px;
+position:fixed;
+width:100%;
+backdrop-filter: blur(15px);
+background:rgba(0,0,0,0.3);
+z-index:100;
+}
+
+nav a{
+color:white;
+margin:0 15px;
+text-decoration:none;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#00d4ff;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:60px;
+background:linear-gradient(90deg,#00d4ff,#7c3aed);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+margin-top:10px;
+font-size:20px;
+opacity:0.8;
+}
+
+.btn{
+margin-top:20px;
+padding:12px 25px;
+border:none;
+border-radius:30px;
+background:#00d4ff;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+}
+
+/* SECTIONS */
+section{
+padding:100px 10%;
+}
+
+h2{
+color:#00d4ff;
+margin-bottom:20px;
+}
+
+/* PROJECTS */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+padding:20px;
+border-radius:15px;
+transition:0.3s;
+border:1px solid rgba(255,255,255,0.1);
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.02);
+}
+
+/* BADGES */
+.badge{
+display:inline-block;
+padding:6px 12px;
+background:#1f2a44;
+border-radius:20px;
+margin:5px;
+font-size:12px;
+}
+
+/* CV BUTTON */
+.cv{
+background:#7c3aed;
+}
+
+/* ACTIVE NAV */
+.active{
+color:#00d4ff;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:30px;
+background:black;
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="bg"></canvas>
+
+<nav>
+<h3>Hosam</h3>
+<div>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<div class="hero">
+<h1>Hosam Alkhwalda</h1>
+<p id="typing"></p>
+<button class="btn" onclick="downloadCV()">Download CV</button>
+</div>
+
+<section id="about">
+<h2>About Me</h2>
+<p>
+AI/ML Engineer in training building real-world intelligent systems using Python, Machine Learning, and data-driven solutions.
+Focused on production-level thinking, not just notebooks.
+</p>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Churn Prediction System</h3>
+<p>End-to-end ML pipeline using Logistic Regression.</p>
+</div>
+
+<div class="card">
+<h3>Regression Analysis</h3>
+<p>Ridge regression model for telecom dataset evaluation.</p>
+</div>
+
+<div class="card">
+<h3>Coming Soon</h3>
+<p>NLP + RAG + Deployment systems.</p>
+</div>
+
+</div>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<span class="badge">Python</span>
+<span class="badge">ML</span>
+<span class="badge">Scikit-learn</span>
+<span class="badge">Pandas</span>
+<span class="badge">SQL</span>
+<span class="badge">Git</span>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p>GitHub: <a href="#">Profile</a></p>
+</section>
+
+<footer>
+<p>© 2026 Hosam | Ultra Elite AI Portfolio</p>
+</footer>
+
+<script>
+
+/* TYPEWRITER */
+const text = "AI Engineer • Machine Learning • Systems Builder";
+let i=0;
+
+function type(){
+if(i<text.length){
+document.getElementById("typing").innerHTML += text.charAt(i);
+i++;
+setTimeout(type,60);
+}
+}
+type();
+
+/* CV DOWNLOAD */
+function downloadCV(){
+const link = document.createElement("a");
+link.href = "https://example.com/cv.pdf";
+link.download = "Hosam_CV.pdf";
+link.click();
+}
+
+/* PARTICLE BACKGROUND */
+const canvas = document.getElementById("bg");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+
+for(let i=0;i<80;i++){
+particles.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+r:Math.random()*2,
+dx:(Math.random()-0.5)*1,
+dy:(Math.random()-0.5)*1
+});
+}
+
+function animate(){
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+particles.forEach(p=>{
+p.x+=p.dx;
+p.y+=p.dy;
+
+if(p.x<0||p.x>canvas.width)p.dx*=-1;
+if(p.y<0||p.y>canvas.height)p.dy*=-1;
+
+ctx.beginPath();
+ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+ctx.fillStyle="#00d4ff";
+ctx.fill();
+});
+
+requestAnimationFrame(animate);
+}
+animate();
+
+</script>
+
+</body>
+</html>
