@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +11,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: 'Segoe UI', sans-serif;
+font-family:'Segoe UI',sans-serif;
 scroll-behavior:smooth;
 }
 
@@ -20,7 +21,7 @@ color:white;
 overflow-x:hidden;
 }
 
-/* CANVAS BACKGROUND */
+/* BACKGROUND */
 canvas{
 position:fixed;
 top:0;
@@ -44,7 +45,6 @@ nav a{
 color:white;
 margin:0 15px;
 text-decoration:none;
-transition:0.3s;
 }
 
 nav a:hover{
@@ -70,17 +70,16 @@ background:linear-gradient(90deg,#00d4ff,#7c3aed);
 
 .hero p{
 margin-top:10px;
-font-size:20px;
 opacity:0.8;
 }
 
 .btn{
-margin-top:20px;
+margin-top:15px;
 padding:12px 25px;
 border:none;
 border-radius:30px;
-background:#00d4ff;
 cursor:pointer;
+background:#00d4ff;
 transition:0.3s;
 }
 
@@ -109,12 +108,12 @@ gap:20px;
 background:rgba(255,255,255,0.05);
 padding:20px;
 border-radius:15px;
-transition:0.3s;
 border:1px solid rgba(255,255,255,0.1);
+transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-10px) scale(1.02);
+transform:translateY(-10px);
 }
 
 /* BADGES */
@@ -125,16 +124,6 @@ background:#1f2a44;
 border-radius:20px;
 margin:5px;
 font-size:12px;
-}
-
-/* CV BUTTON */
-.cv{
-background:#7c3aed;
-}
-
-/* ACTIVE NAV */
-.active{
-color:#00d4ff;
 }
 
 /* FOOTER */
@@ -160,66 +149,95 @@ background:black;
 </div>
 </nav>
 
+<!-- HERO -->
 <div class="hero">
 <h1>Hosam Alkhwalda</h1>
 <p id="typing"></p>
+
+<p style="max-width:600px; margin-top:15px;">
+AI/ML Engineer focused on building real-world machine learning systems and intelligent applications.
+</p>
+
+<div>
 <button class="btn" onclick="downloadCV()">Download CV</button>
+<a href="https://github.com/YOUR_USERNAME" target="_blank">
+<button class="btn" style="background:#7c3aed;">GitHub</button>
+</a>
+</div>
 </div>
 
+<!-- ABOUT -->
 <section id="about">
 <h2>About Me</h2>
+
 <p>
-AI/ML Engineer in training building real-world intelligent systems using Python, Machine Learning, and data-driven solutions.
-Focused on production-level thinking, not just notebooks.
+I am an aspiring AI Engineer building strong foundations in Machine Learning, Data Science, and Software Engineering.
+I enjoy turning data into intelligent systems and solving real-world problems using Python and ML.
 </p>
+
 </section>
 
+<!-- PROJECTS -->
 <section id="projects">
 <h2>Projects</h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>Churn Prediction System</h3>
-<p>End-to-end ML pipeline using Logistic Regression.</p>
+<h3>Customer Churn Prediction</h3>
+<p>Logistic regression model to predict telecom customer churn.</p>
+<a href="https://github.com/YOUR_USERNAME">View Repo</a>
 </div>
 
 <div class="card">
 <h3>Regression Analysis</h3>
-<p>Ridge regression model for telecom dataset evaluation.</p>
+<p>Ridge regression model for monthly charges prediction.</p>
+<a href="https://github.com/YOUR_USERNAME">View Repo</a>
 </div>
 
 <div class="card">
-<h3>Coming Soon</h3>
-<p>NLP + RAG + Deployment systems.</p>
+<h3>NLP & RAG (Coming Soon)</h3>
+<p>Advanced AI retrieval systems and LLM applications.</p>
 </div>
 
 </div>
 </section>
 
+<!-- SKILLS -->
 <section id="skills">
 <h2>Skills</h2>
+
 <span class="badge">Python</span>
-<span class="badge">ML</span>
-<span class="badge">Scikit-learn</span>
 <span class="badge">Pandas</span>
+<span class="badge">NumPy</span>
+<span class="badge">Scikit-learn</span>
 <span class="badge">SQL</span>
+<span class="badge">Machine Learning</span>
 <span class="badge">Git</span>
+
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
 <h2>Contact</h2>
-<p>GitHub: <a href="#">Profile</a></p>
+
+<p>Email: your-email@gmail.com</p>
+
+<p>
+GitHub:
+<a href="https://github.com/YOUR_USERNAME">Profile</a>
+</p>
+
 </section>
 
 <footer>
-<p>© 2026 Hosam | Ultra Elite AI Portfolio</p>
+<p>© 2026 Hosam | Ultra Portfolio</p>
 </footer>
 
 <script>
 
 /* TYPEWRITER */
-const text = "AI Engineer • Machine Learning • Systems Builder";
+const text = "AI Engineer • Machine Learning • Data Science";
 let i=0;
 
 function type(){
@@ -231,30 +249,30 @@ setTimeout(type,60);
 }
 type();
 
-/* CV DOWNLOAD */
+/* CV */
 function downloadCV(){
-const link = document.createElement("a");
-link.href = "https://example.com/cv.pdf";
-link.download = "Hosam_CV.pdf";
+const link=document.createElement("a");
+link.href="https://example.com/cv.pdf";
+link.download="CV.pdf";
 link.click();
 }
 
-/* PARTICLE BACKGROUND */
-const canvas = document.getElementById("bg");
-const ctx = canvas.getContext("2d");
+/* PARTICLES */
+const canvas=document.getElementById("bg");
+const ctx=canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
 
-let particles = [];
+let particles=[];
 
 for(let i=0;i<80;i++){
 particles.push({
 x:Math.random()*canvas.width,
 y:Math.random()*canvas.height,
 r:Math.random()*2,
-dx:(Math.random()-0.5)*1,
-dy:(Math.random()-0.5)*1
+dx:(Math.random()-0.5),
+dy:(Math.random()-0.5)
 });
 }
 
