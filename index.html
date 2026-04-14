@@ -349,13 +349,9 @@ setTimeout(type,60);
 }
 type();
 
-/* CV */
-function downloadCV(){
-const link=document.createElement("a");
-link.href="cv.pdf";
-link.download="CV.pdf";
-link.click();
-}
+<a href="./cv.pdf" download="CV.pdf">
+  <button class="btn">Download CV</button>
+</a>
 
 /* PARTICLES */
 const canvas=document.getElementById("bg");
