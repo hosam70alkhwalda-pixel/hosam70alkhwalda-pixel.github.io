@@ -1,10 +1,10 @@
 
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hosam Alkhawaldeh | AI ENGINEER . ELECTRICAL POWER ENGINEER</title>
+<title>Hosam Alkhawaldeh | AI ENGINEER . ELECTRICAL POWER ENGINEER  </title>
 
 <style>
 *{
@@ -118,9 +118,12 @@ background: linear-gradient(90deg,#00d4ff,#7c3aed);
 -webkit-text-fill-color:transparent;
 }
 
+
 .card:hover{
 transform:translateY(-10px);
 }
+
+
 
 /* BADGES */
 .badge{
@@ -162,14 +165,11 @@ background:black;
 <p id="typing"></p>
 
 <p style="max-width:600px; margin-top:15px;">
-AI/ML & Electrical Engineer focused on building real-world intelligent systems.
+AI/ML Engineer focused on building real-world machine learning systems and intelligent applications.
 </p>
 
 <div>
-<a href="./cv.pdf" download="CV.pdf">
-  <button class="btn">Download CV</button>
-</a>
-
+<button class="btn" onclick="downloadCV()">Download CV</button>
 <a href="https://github.com/hosam70alkhwalda-pixel" target="_blank">
 <button class="btn" style="background:#7c3aed;">GitHub</button>
 </a>
@@ -179,24 +179,30 @@ AI/ML & Electrical Engineer focused on building real-world intelligent systems.
 <!-- ABOUT -->
 <section id="about">
 <h2>About Me</h2>
+
 <p>
-I am a graduate of Al-Balqa Applied University with a Bachelor’s degree in Electrical Power Engineering.
-I am a member of the Jordan Engineers Association and IEEE, with experience combining electrical systems and AI technologies.
-I focus on building intelligent, data-driven engineering solutions.
+I am a graduate of Al-Balqa Applied University, where I earned a Bachelor’s degree in Electrical Power Engineering. I am a member of the Jordan Engineers Association, as well as a member of the IEEE and the Electrical Engineers Youth and Media Committee.
+My knowledge spans electrical systems and AI-driven solutions, with a strong emphasis on integrating engineering principles with modern artificial intelligence technologies to deliver efficient and innovative solutions.
+Currently, I work as an Electrical Engineer and serve as a Manager at Roya Design Company, where I oversee multiple projects across Jordan and lead teams to ensure the successful delivery of high-quality engineering projects.
+“Through the AI.SPIRE program, I’m developing applied AI skills in ML pipelines, NLP systems, and production data infrastructure, with a focus on integrating physical automation with intelligent software.”
 </p>
+
 </section>
+
 
 <!-- EXPERIENCE -->
 <section id="experience">
 <h2>Experience</h2>
 
 <div class="card">
-<h3>Electrical Power Engineer & Project Manager</h3>
+<h3>Power Systems & Electrical Engineering Experience</h3>
 <p>
-Experience in power systems, renewable energy, SCADA, and industrial engineering projects.
-Currently working as a Project Manager at Roya Design Company leading engineering teams across Jordan.
+During my training, I completed a four-month internship at the Electricity Distribution Company in Khalda, where I worked as an engineering trainee across multiple departments, including Standards and Specifications, Renewable Energy, Electrical Studies, Protection Systems, and SCADA systems. Throughout this experience, I was involved in various technical inspections and field tests, including cable testing at the KEPCO cable factory in Zarqa, visiting one of Jordan’s largest power plants, the Samra Thermal Power Station, and performing transformer inspections in the Ma’an region. Additionally, I completed a training course on synchronous generators, which strengthened my understanding of power generation systems. For my graduation project, I worked on a PVT (Photovoltaic Thermal) system, integrating electrical and thermal technologies to enhance photovoltaic efficiency and maximize overall energy utilization.
 </p>
 </div>
+
+
+
 </section>
 
 <!-- PROJECTS -->
@@ -206,28 +212,79 @@ Currently working as a Project Manager at Roya Design Company leading engineerin
 <div class="grid">
 
 <div class="card">
-<h3>M1 — Git Workflows</h3>
-<p>Environment setup and reproducible project structure.</p>
+<h3>M1 — Applied Lab Assignment: git Workflows </h3>
+<p>Added project environment setup for reproducibility and collaboration.
+This includes a requirements.txt with core dependencies (pandas, matplotlib), an updated .gitignore to exclude the virtual environment, and an initial project README description. The local virtual environment was configured and verified successfully using test_environment.py, which runs without errors and outputs “Environment OK”.</p>
 <a href="https://github.com/LevelUp-Applied-AI/m1-l1-git-workflows-hosam70alkhwalda-pixel/pull/1">View Repo</a>
 </div>
 
 <div class="card">
-<h3>M2 — ML Pipeline</h3>
-<p>Built regression and neural network pipelines for real datasets.</p>
+<h3>M1 — Integration Task Assignment: Dev Environment</h3>
+<p>Implemented a complete team-ready project setup including README, .gitignore, setup.sh, AGENTS.md, and CHANGELOG.md. The environment is fully reproducible and tested locally, allowing new contributors to set up and run the project in under two minutes with no issues.</p>
+<a href="https://github.com/LevelUp-Applied-AI/m1-l1-git-workflows-hosam70alkhwalda-pixel/pull/5">View Repo</a>
+</div>
+
+<div class="card">
+<h3>M2 — Applied Lab Assignment: Retail Sales Data Pipeline</h3>
+<p>Built a modular end-to-end data pipeline in Python for retail sales analysis, including data loading, cleaning, feature engineering, summary statistics, and automated visualization generation. The pipeline handles real-world messy data, ensures reproducibility, and is validated through pytest unit tests to guarantee correctness across each processing stage.</p>
 <a href="https://github.com/LevelUp-Applied-AI/m2-l2-data-pipeline-hosam70alkhwalda-pixel/pull/1">View Repo</a>
 </div>
 
 <div class="card">
-<h3>M3 — SQL & ETL</h3>
-<p>Advanced SQL analytics and ETL data pipeline system.</p>
+<h3>M2 — Integration Task Assignment: PyTorch Housing Price Prediction</h3>
+<p>Built a PyTorch-based neural network pipeline for predicting housing prices using a structured regression model. The implementation includes data loading, feature standardization, tensor conversion, a fully connected neural network (5 → 32 → 1), and a full training loop over 100 epochs with loss tracking and optimization using Adam and MSE loss. The model is trained end-to-end and generates predictions saved to CSV for evaluation.</p>
+<a href="https://github.com/LevelUp-Applied-AI/m2-i2-pytorch-hosam70alkhwalda-pixel/pull/1">View Repo</a>
+</div>
+
+<div class="card">
+<h3>M3 — Applied Lab Assignment: SQL Analytics Pack</h3>
+<p>Built a full SQL analytics pack for Levant Tech Solutions, including complex multi-table queries using JOINs, GROUP BY, CTEs, and window functions to analyze employees, departments, projects, and staffing patterns. The work also includes a KPI brief with business-focused metrics and a custom schema extension for employee certifications with full DDL, sample data, and relational queries across the expanded database structure.</p>
+<a href="https://github.com/LevelUp-Applied-AI/m3-l3-sql-analytics-hosam70alkhwalda-pixel/pull/3">View Repo</a>
+</div>
+
+<div class="card">
+<h3>M3 — Stretch: SQL Murder Mystery Investigation</h3>
+<p>nalyzed and optimized a PostgreSQL “SQL Murder Mystery” workload using EXPLAIN ANALYZE to evaluate query execution plans, identify sequential scans, and improve performance through strategic index creation. The work includes before-and-after benchmarking of query performance, implementation of indexing strategies, and a written analysis discussing trade-offs between read and write efficiency, as well as recommendations for production-grade database optimization.</p>
+<a href="https://github.com/MsDiala/SQL-Murder-Mystery/pull/19">View Repo</a>
+</div>
+
+<div class="card">
+<h3>M3 — Integration Task Assignment: ETL Pipeline</h3>
+<p>Built an end-to-end ETL pipeline in Python that extracts data from a PostgreSQL database, transforms and cleans it using Pandas (including joins, filtering, and customer-level aggregations), validates data quality through automated checks, and loads the final dataset into both a PostgreSQL table and a CSV file. The pipeline ensures reproducible, production-style data processing with clear validation rules and structured output for analytics.</p>
 <a href="https://github.com/LevelUp-Applied-AI/m3-i3-etl-pipeline-hosam70alkhwalda-pixel/pull/1">View Repo</a>
 </div>
 
 <div class="card">
-<h3>M4 — Data Analytics</h3>
-<p>Exploratory data analysis and KPI dashboard project.</p>
+<h3>M3 — Stretch: Time-Series Analytics</h3>
+<p>Produced advanced SQL-based time-series and cohort analytics using window functions (LAG, LEAD, ROWS BETWEEN, and ROW_NUMBER) to analyze revenue trends, customer retention, and category performance over a 12-month period. The work includes cohort-based behavioral segmentation, period-over-period growth calculations, and moving average trend analysis, translated into a business-facing executive report with actionable insights and data-driven recommendations for strategic decision-making.</p>
+<a href="https://github.com/LevelUp-Applied-AI/m3-s2-time-series-analytics-hosam70alkhwalda-pixel/pull/1">View Repo</a>
+</div>
+
+<div class="card">
+<h3>M4 — Applied Lab Assignment: Descriptive Analytics</h3>
+<p>Conducted a full exploratory data analysis (EDA) on student performance data from Hashemite Technical University, including data cleaning, distribution analysis, correlation analysis, and statistical hypothesis testing. The analysis identifies key relationships between study behavior, attendance, internships, and GPA, supported by visualizations and statistical tests (t-tests and chi-square), and summarizes actionable insights and recommendations in a structured findings report backed by statistical evidence.</p>
 <a href="https://github.com/LevelUp-Applied-AI/m4-l4-descriptive-analytics-hosam70alkhwalda-pixel/pull/1">View Repo</a>
 </div>
+
+<div class="card">
+<h3>M4 — Integration Task Assignment: KPI Dashboard</h3>
+<p>Built a full KPI analytics framework and executive reporting dashboard for the Amman Digital Market using PostgreSQL and Python. The project includes data extraction from a relational database, definition of business-focused KPIs across revenue, customer, and product dimensions, and statistical validation using hypothesis testing to confirm key business patterns. It also generates publication-quality visualizations and a concise executive summary translating analytical results into actionable business recommendations.</p>
+<a href="https://github.com/LevelUp-Applied-AI/m4-i4-kpi-dashboard-hosam70alkhwalda-pixel/pull/1">View Repo</a>
+</div>
+
+<div class="card">
+<h3>M4 — Stretch: Shared Chart Gallery</h3>
+<p>Created a publication-quality KPI visualization highlighting a key business insight from the Amman Digital Market dataset, supported by a reproducible Python script and clean data storytelling. The project includes a refined chart designed to communicate a single actionable finding clearly, along with a concise written analysis explaining the KPI selection, visualization choice, and its business implications. It also incorporates a comparative analysis with a peer to evaluate differing KPI priorities and interpretative perspectives on the same dataset.</p>
+<a href="https://github.com/LevelUp-Applied-AI/m4-s2/pull/17">View Repo</a>
+</div>
+
+
+
+
+
+
+
+
 
 <div class="card">
 <h3>NLP & RAG (Coming Soon)</h3>
@@ -242,10 +299,11 @@ Currently working as a Project Manager at Roya Design Company leading engineerin
 <h2>Skills</h2>
 
 <span class="badge">Python</span>
-<span class="badge">Machine Learning</span>
 <span class="badge">Pandas</span>
-<span class="badge">SQL</span>
+<span class="badge">NumPy</span>
 <span class="badge">Scikit-learn</span>
+<span class="badge">SQL</span>
+<span class="badge">Machine Learning</span>
 <span class="badge">Git</span>
 
 </section>
@@ -254,31 +312,36 @@ Currently working as a Project Manager at Roya Design Company leading engineerin
 <section id="contact">
 <h2>Contact</h2>
 
-<p>Email: hosam70alkhwalda@gmail.com</p>
-<p>Phone: +962 790 647 724</p>
+<a href="mailto:hosam70alkhwalda@gmail.com">Send Email</a>
+
+<a href="tel:+962790647724">Call Me</a>
 
 <p>
 GitHub:
-<a href="https://github.com/hosam70alkhwalda-pixel">Profile</a>
+<a href="https://github.com/hosam70alkhwalda-pixel" target="_blank">Profile</a>
 </p>
 
 <p>
 LinkedIn:
-<a href="https://www.linkedin.com/in/hosam-alkhawaldeh-73b993338">Profile</a>
+<a href="https://www.linkedin.com/in/hosam-alkhawaldeh-73b993338" target="_blank">Profile</a>
 </p>
 
 </section>
 
 <footer>
-<p>Hosam Alkhawaldeh • AI & Electrical Engineer • 2026</p>
+<p>Hosam Alkhawaldeh . Electrical & AI Engineer . 2026 . 
+   Jordan & Amman                                 Github Pages
+</p>
 </footer>
 
 <script>
+
+/* TYPEWRITER */
 const text = "AI & Electrical Engineer • Machine Learning • Data Science";
-let i = 0;
+let i=0;
 
 function type(){
-if(i < text.length){
+if(i<text.length){
 document.getElementById("typing").innerHTML += text.charAt(i);
 i++;
 setTimeout(type,60);
@@ -286,20 +349,22 @@ setTimeout(type,60);
 }
 type();
 
+/* CV */
 function downloadCV(){
-const link = document.createElement("a");
-link.href = "./cv.pdf";
-link.download = "CV.pdf";
+const link=document.createElement("a");
+link.href="cv.pdf";
+link.download="CV.pdf";
 link.click();
 }
 
-const canvas = document.getElementById("bg");
-const ctx = canvas.getContext("2d");
+/* PARTICLES */
+const canvas=document.getElementById("bg");
+const ctx=canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
 
-let particles = [];
+let particles=[];
 
 for(let i=0;i<80;i++){
 particles.push({
@@ -315,8 +380,8 @@ function animate(){
 ctx.clearRect(0,0,canvas.width,canvas.height);
 
 particles.forEach(p=>{
-p.x += p.dx;
-p.y += p.dy;
+p.x+=p.dx;
+p.y+=p.dy;
 
 if(p.x<0||p.x>canvas.width)p.dx*=-1;
 if(p.y<0||p.y>canvas.height)p.dy*=-1;
@@ -330,6 +395,7 @@ ctx.fill();
 requestAnimationFrame(animate);
 }
 animate();
+
 </script>
 
 </body>
