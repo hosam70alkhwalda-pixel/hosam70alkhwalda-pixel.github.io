@@ -141,6 +141,17 @@ text-align:center;
 padding:30px;
 background:black;
 }
+/* existing CSS code... */
+
+.hero-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00d4ff;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+}
 </style>
 </head>
 
@@ -161,6 +172,7 @@ background:black;
 
 <!-- HERO -->
 <div class="hero">
+<img src="image.jpg" alt="My Photo" class="hero-img">
 <h1>Hosam Alkhawaldeh</h1>
 <p id="typing"></p>
 
@@ -180,15 +192,18 @@ AI/ML Engineer focused on building real-world machine learning systems and intel
 
 <!-- ABOUT -->
 <section id="about">
-<h2>About Me</h2>
+  <h2>About Me</h2>
+  <div class="card about-text">
 
-<p>
-I am a graduate of Al-Balqa Applied University, where I earned a Bachelor’s degree in Electrical Power Engineering. I am a member of the Jordan Engineers Association, as well as a member of the IEEE and the Electrical Engineers Youth and Media Committee.
-My knowledge spans electrical systems and AI-driven solutions, with a strong emphasis on integrating engineering principles with modern artificial intelligence technologies to deliver efficient and innovative solutions.
-Currently, I work as an Electrical Engineer and serve as a Manager at Roya Design Company, where I oversee multiple projects across Jordan and lead teams to ensure the successful delivery of high-quality engineering projects.
-“Through the AI.SPIRE program, I’m developing applied AI skills in ML pipelines, NLP systems, and production data infrastructure, with a focus on integrating physical automation with intelligent software.”
-</p>
+    <p>
+      I am a graduate of Al-Balqa Applied University, where I earned a Bachelor’s degree in Electrical Power Engineering. I am an active member of the Jordan Engineers Association, IEEE, and the Electrical Engineers Youth and Media Committee. My academic background and technical expertise span electrical power systems and AI-driven solutions, with a strong focus on integrating traditional engineering principles with modern artificial intelligence technologies to develop efficient and innovative systems.
+    </p>
 
+    <p>
+      Currently, I work as an Electrical Engineer and Manager at Roya Design Company, where I oversee multiple projects across Jordan and lead engineering teams to ensure the successful delivery of high-quality results. In parallel, through the AI.SPIRE program, I am advancing my applied AI skills in machine learning pipelines, natural language processing systems, and production-level data infrastructure, with a focus on bridging physical engineering systems with intelligent software solutions.
+    </p>
+
+  </div>
 </section>
 
 
@@ -197,9 +212,15 @@ Currently, I work as an Electrical Engineer and serve as a Manager at Roya Desig
 <h2>Experience</h2>
 
 <div class="card">
-<h3>Power Systems & Electrical Engineering Experience</h3>
-<p>
-During my training, I completed a four-month internship at the Electricity Distribution Company in Khalda, where I worked as an engineering trainee across multiple departments, including Standards and Specifications, Renewable Energy, Electrical Studies, Protection Systems, and SCADA systems. Throughout this experience, I was involved in various technical inspections and field tests, including cable testing at the KEPCO cable factory in Zarqa, visiting one of Jordan’s largest power plants, the Samra Thermal Power Station, and performing transformer inspections in the Ma’an region. Additionally, I completed a training course on synchronous generators, which strengthened my understanding of power generation systems. For my graduation project, I worked on a PVT (Photovoltaic Thermal) system, integrating electrical and thermal technologies to enhance photovoltaic efficiency and maximize overall energy utilization.
+<ul>
+<h3>Power Systems & Electrical Engineering Experience.</h3>
+<li></h4> In April 2024, I completed a four-month internship at the Electricity Distribution Company [EDCO] in Khalda, where I worked as an engineering trainee across multiple departments.</li>
+<li></h4> In september 2023, I was involved in various technical inspections and field tests, including cable testing at the CABLECO cable factory in Zarqa.</li>
+<li></h4> In August 2023, I visited one of Jordan’s largest power plants, the Samra Thermal Power Station.</li>
+<li></h4> In April 2023, I performed transformer inspections in the Ma’an region.</li>
+<li></h4> In March 2023, I completed a training course on synchronous generators, strengthening my understanding of power generation systems.</li>
+</ul>
+
 </p>
 </div>
 
@@ -280,17 +301,20 @@ This includes a requirements.txt with core dependencies (pandas, matplotlib), an
 <a href="https://github.com/LevelUp-Applied-AI/m4-s2/pull/17">View Repo</a>
 </div>
 
-
-
-
-
-
+<div class="card">
+<h3>M5A — Applied Lab Assignment: Regression & Evaluation</h3>
+<p>Telecom Churn ML Pipeline
+Developed classification and regression models using scikit-learn Pipelines with cross-validation and regularization (Logistic, Ridge, Lasso), focusing on model evaluation and imbalanced data handling.</p>
+<a href="https://github.com/LevelUp-Applied-AI/m5-l5a-regression-eval-hosam70alkhwalda-pixel-1/pull/1">View Repo</a>
+</div>
 
 
 
 <div class="card">
-<h3>NLP & RAG (Coming Soon)</h3>
-<p>Advanced AI retrieval systems and LLM applications.</p>
+<h3>M5A — Stretch: Regularization Explorer</h3>
+<p>Regularization Path Visualization Tool
+Built a tool to visualize coefficient changes in Logistic Regression under L1 and L2 regularization, demonstrating feature selection behavior and model stability across different regularization strengths.</p>
+<a href="https://github.com/hosam70alkhwalda-pixel/Regularization-Explorer">View Repo</a>
 </div>
 
 </div>
@@ -307,6 +331,7 @@ This includes a requirements.txt with core dependencies (pandas, matplotlib), an
 <span class="badge">SQL</span>
 <span class="badge">Machine Learning</span>
 <span class="badge">Git</span>
+<span class="badge">Soft / Professional Skills</span>
 
 </section>
 
@@ -314,18 +339,20 @@ This includes a requirements.txt with core dependencies (pandas, matplotlib), an
 <section id="contact">
 <h2>Contact</h2>
 
-<a href="mailto:hosam70alkhwalda@gmail.com">Send Email</a>
-
-<a href="tel:+962790647724">Call Me</a>
-
 <p>
-GitHub:
-<a href="https://github.com/hosam70alkhwalda-pixel" target="_blank">Profile</a>
+<a href="mailto:hosam70alkhwalda@gmail.com" class="email">Send Email</a>
+<span class="divider"> | </span>
+<a href="tel:+962790647724" class="call">Call Me</a>
 </p>
 
 <p>
-LinkedIn:
-<a href="https://www.linkedin.com/in/hosam-alkhawaldeh-73b993338" target="_blank">Profile</a>
+<span class="label">GitHub:</span>
+<a href="https://github.com/hosam70alkhwalda-pixel" target="_blank" class="link">Profile</a>
+</p>
+
+<p>
+<span class="label">LinkedIn:</span>
+<a href="https://www.linkedin.com/in/hosam-alkhawaldeh-73b993338" target="_blank" class="link-alt">Profile</a>
 </p>
 
 </section>
